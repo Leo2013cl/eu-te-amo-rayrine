@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            color: #d6336c;
+        }
+        h1, h2 {
+            color: #b30059;
+        }
+        .calendario, .mensagens {
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffe6f2;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estamos juntos há:</h1>
+    <p id="contador" style="font-size: 24px; font-weight: bold;"></p>
+
+    <div class="calendario">
+        <h2>Momentos Especiais</h2>
+        <ul>
+            <li>17/06/2023 - Nosso primeiro encontro ❤️</li>
+            <li>30/06/2023 - Primeiro beijinho 💋</li>
+            <li>02/08/2023 - Pedido de namoro 💍</li>
+        </ul>
+    </div>
+    
+    <div class="mensagens">
+        <h2>Nossas Memórias</h2>
+        <p>Fotos e mensagens especiais que marcaram nossa história:</p>
+        <img src="foto1.jpg" alt="Nosso primeiro encontro">
+        <img src="foto2.jpg" alt="Viagem inesquecível">
+	<img src="foto3.jpg" alt="Nosso primeiro encontro">
+        <img src="foto4.jpg" alt="Viagem ines">
+	<img src="foto5.jpg" alt="Viagem inesqueível">
+	<img src="foto6.jpg" alt="Viagem inesqecível">
+	<img src="foto7.jpg" alt="Viagem inesqueível">
+	<img src="foto8.jpg" alt="Viagem inecível">
+	<img src="foto9.jpg" alt="Viagem inesqecve">
+	<img src="foto10.jpg" alt="Viagem inesecível">
+
+    </div>
+    
+    <script>
+        function calcularTempoJuntos() {
+            const dataInicio = new Date("2023-08-02T00:00:00"); // Pedido de namoro
+            const agora = new Date();
+            const diferenca = agora - dataInicio;
+
+            const anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+            const dias = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            document.getElementById("contador").innerText = 
+                `${anos} anos, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+
+            setTimeout(calcularTempoJuntos, 1000); // Atualiza o contador a cada segundo
+        }
+
+        calcularTempoJuntos();
+    </script>
+</body>
+</html>
